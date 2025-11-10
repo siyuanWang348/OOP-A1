@@ -1,7 +1,4 @@
 /**
- * 预约类：存储患者预约信息及关联的医生
- */
-/**
  * Appointment class: stores patient appointment information and associated doctor
  */
 public class Appointment {

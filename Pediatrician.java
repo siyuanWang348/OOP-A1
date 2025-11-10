@@ -1,7 +1,4 @@
 /**
- * 儿科医生子类（继承自HealthProfessional）
- */
-/**
  * Pediatrician subclass (inherits from HealthProfessional)
  * Added unique attribute: specialized age range (different from general practitioners)
  */

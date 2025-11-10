@@ -1,7 +1,4 @@
 /**
- * 全科医生子类（继承自HealthProfessional）
- */
-/**
  * General Practitioner subclass (inherits from HealthProfessional)
  * Added unique attribute: daily maximum number of patients (different from other doctor types)
  */
@@ -25,7 +22,7 @@ public class GeneralPractitioner extends HealthProfessional {
     public void printGPDetails() {
         System.out.println("=== General Practitioner Information ===");
         super.printDetails(); // Call parent class print method (ID, Name, Field)
-        System.out.println("Daily maximum patients: " + dailyMaxPatients + " people");
+        System.out.println("Daily maximum patients: " + dailyMaxPatients);
         System.out.println(); // Empty line separator for readability
     }
 

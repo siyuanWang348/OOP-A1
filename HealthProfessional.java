@@ -3,7 +3,7 @@
  */
 /**
  * Health professional base class (parent class)
- * Contains common attributes and behaviors of all health professionals
+        * Contains common attributes and behaviors of all health professionals
  */
 public class HealthProfessional {
     // Instance variables: ID (numeric only), name, field of expertise (common attributes)
