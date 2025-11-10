@@ -1,22 +1,25 @@
 /**
  * 预约类：存储患者预约信息及关联的医生
  */
+/**
+ * Appointment class: stores patient appointment information and associated doctor
+ */
 public class Appointment {
-    // 实例变量：患者姓名、患者手机号、预约时间段、选中的医生（支持所有子类类型）
+    // Instance variables: patient name, patient phone number, appointment time slot, selected doctor (supports all subclass types)
     private String patientName;
     private String patientPhone;
     private String timeSlot;
-    private HealthProfessional selectedDoctor; // 多态：父类引用指向子类对象
+    private HealthProfessional selectedDoctor; // Polymorphism: parent class reference points to subclass object
 
-    // 1. 默认构造方法
+    // 1. Default constructor
     public Appointment() {
-        this.patientName = "未设置";
-        this.patientPhone = "未设置";
-        this.timeSlot = "未设置";
+        this.patientName = "Not set";
+        this.patientPhone = "Not set";
+        this.timeSlot = "Not set";
         this.selectedDoctor = new HealthProfessional();
     }
 
-    // 2. 全参构造方法
+    // 2. Full parameter constructor
     public Appointment(String patientName, String patientPhone, String timeSlot, HealthProfessional selectedDoctor) {
         this.patientName = patientName;
         this.patientPhone = patientPhone;
@@ -24,14 +27,14 @@ public class Appointment {
         this.selectedDoctor = selectedDoctor;
     }
 
-    // 打印所有实例变量的方法（含医生详细信息）
+    // Method to print all instance variables (including doctor details)
     public void printAppointmentDetails() {
-        System.out.println("=== 预约信息 ===");
-        System.out.println("患者姓名：" + patientName);
-        System.out.println("患者手机号：" + patientPhone);
-        System.out.println("预约时间段：" + timeSlot);
-        System.out.println("接诊医生信息：");
-        // 多态：根据医生实际类型调用对应打印方法
+        System.out.println("=== Appointment Information ===");
+        System.out.println("Patient name: " + patientName);
+        System.out.println("Patient phone: " + patientPhone);
+        System.out.println("Appointment time slot: " + timeSlot);
+        System.out.println("Treating doctor information:");
+        // Polymorphism: call corresponding print method based on actual doctor type
         if (selectedDoctor instanceof GeneralPractitioner) {
             ((GeneralPractitioner) selectedDoctor).printGPDetails();
         } else if (selectedDoctor instanceof Pediatrician) {
@@ -41,7 +44,7 @@ public class Appointment {
         }
     }
 
-    // Getter和Setter（封装属性，支持集合操作）
+    // Getter and Setter (encapsulate attributes, support collection operations)
     public String getPatientName() {
         return patientName;
     }

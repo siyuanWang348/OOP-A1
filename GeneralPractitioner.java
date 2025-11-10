@@ -1,32 +1,35 @@
 /**
  * 全科医生子类（继承自HealthProfessional）
- * 新增独特属性：每日接诊上限（区别于其他医生类型）
+ */
+/**
+ * General Practitioner subclass (inherits from HealthProfessional)
+ * Added unique attribute: daily maximum number of patients (different from other doctor types)
  */
 public class GeneralPractitioner extends HealthProfessional {
-    // 独特实例变量：每日接诊上限（如20人/天）
+    // Unique instance variable: daily maximum number of patients (e.g. 20 people/day)
     private int dailyMaxPatients;
 
-    // 1. 默认构造方法
+    // 1. Default constructor
     public GeneralPractitioner() {
-        super(); // 调用父类默认构造
+        super(); // Call parent class default constructor
         this.dailyMaxPatients = 0;
     }
 
-    // 2. 全参构造方法（含父类所有属性）
+    // 2. Full parameter constructor (including all parent class attributes)
     public GeneralPractitioner(int id, String name, String field, int dailyMaxPatients) {
-        super(id, name, field); // 调用父类全参构造
+        super(id, name, field); // Call parent class full parameter constructor
         this.dailyMaxPatients = dailyMaxPatients;
     }
 
-    // 打印完整信息（含类型标识 + 父类属性）
+    // Print complete information (including type identifier + parent class attributes)
     public void printGPDetails() {
-        System.out.println("=== 全科医生信息 ===");
-        super.printDetails(); // 调用父类打印方法（ID、姓名、专业领域）
-        System.out.println("每日接诊上限：" + dailyMaxPatients + "人");
-        System.out.println(); // 空行分隔，提升可读性
+        System.out.println("=== General Practitioner Information ===");
+        super.printDetails(); // Call parent class print method (ID, Name, Field)
+        System.out.println("Daily maximum patients: " + dailyMaxPatients + " people");
+        System.out.println(); // Empty line separator for readability
     }
 
-    // Getter和Setter（封装独特属性）
+    // Getter and Setter (encapsulate unique attributes)
     public int getDailyMaxPatients() {
         return dailyMaxPatients;
     }

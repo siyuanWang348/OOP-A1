@@ -1,35 +1,38 @@
 /**
  * 健康专业人员基础类（父类）
- * 包含所有健康专业人员的通用属性和行为
+ */
+/**
+ * Health professional base class (parent class)
+ * Contains common attributes and behaviors of all health professionals
  */
 public class HealthProfessional {
-    // 实例变量：ID（纯数字）、姓名、专业领域（通用属性）
-    private int id; // 确保ID为纯数字（int类型天然满足）
+    // Instance variables: ID (numeric only), name, field of expertise (common attributes)
+    private int id; // Ensure ID is numeric (int type naturally satisfies this)
     private String name;
-    private String field; // 专业领域（如"内科"、"儿科"）
+    private String field; // Field of expertise (e.g. "Internal Medicine", "Pediatrics")
 
-    // 1. 默认构造方法
+    // 1. Default constructor
     public HealthProfessional() {
         this.id = 0;
-        this.name = "未设置";
-        this.field = "未设置";
+        this.name = "Not set";
+        this.field = "Not set";
     }
 
-    // 2. 全参构造方法
+    // 2. Full parameter constructor
     public HealthProfessional(int id, String name, String field) {
         this.id = id;
         this.name = name;
         this.field = field;
     }
 
-    // 打印所有实例变量的方法
+    // Method to print all instance variables
     public void printDetails() {
-        System.out.println("健康专业人员ID：" + id);
-        System.out.println("姓名：" + name);
-        System.out.println("专业领域：" + field);
+        System.out.println("Health Professional ID: " + id);
+        System.out.println("Name: " + name);
+        System.out.println("Field of expertise: " + field);
     }
 
-    // Getter和Setter（封装属性，支持子类访问和预约类使用）
+    // Getter and Setter (encapsulate attributes, support subclass access and appointment class usage)
     public int getId() {
         return id;
     }
